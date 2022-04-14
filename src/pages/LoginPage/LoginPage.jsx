@@ -1,10 +1,14 @@
 import React from "react";
+import LoginBG from "../../assets/loginBG.png";
+import "./loginStyle.css";
 
 const LoginPage = () => {
   return (
     <div className="login">
       <div className="login-content">
-        <div className="login-photo"></div>
+        <div className="login-photo">
+          <img src={LoginBG} alt="login background" />
+        </div>
         <div className="login-main">
           <div className="login-fields">
             <div className="login-title">Welcome</div>
@@ -15,8 +19,10 @@ const LoginPage = () => {
             </div>
             <button className="login-btn">Login</button>
           </div>
-          <span className="login-acc">Don’t have an account?</span>
-          <span className="login-signup">Sign up</span>
+          <div className="login-footer">
+            <span className="login-acc">Don’t have an account?</span>
+            <span className="login-signup">Sign up</span>
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import Routing from "./pages/Routing/Routing";
+import './App.css';
 
 function App() {
   return (
