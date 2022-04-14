@@ -1,0 +1,23 @@
+.events {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #140f1f;
+}
+
+.events-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.events-holders {
+  flex: 1;
+  background: url("../../assets/eventsBG.png") no-repeat;
+  padding: 170px 90px;
+}
+
+.events-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ffffff;
+}

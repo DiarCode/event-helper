@@ -1,0 +1,95 @@
+.about {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #140f1f;
+}
+
+.about-photo{
+    margin-bottom: 130px;
+}
+
+.about-blocks{
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    margin-bottom: 154px;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.block-text {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 50px;
+}
+
+.block-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.block-body {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.block-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.block1-title {
+  color: #bc62e7;
+}
+
+.block1-body {
+  color: #e0bff0;
+}
+
+.block2-title {
+  color: #69a8f3;
+}
+
+.block2-body {
+  color: #cddef1;
+}
+
+.block3-title {
+  color: #f37de5;
+}
+
+.block3-body {
+  color: #f8cef3;
+}
+
+.block3-signup {
+  display: flex;
+  align-self: start;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f8cef3;
+  padding: 12px 29px;
+  border: 2px solid #f8cef3;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.block3-signup:hover {
+  background-color: #f8cef3;
+  color: #f37de5;
+}

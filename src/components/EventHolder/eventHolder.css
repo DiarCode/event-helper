@@ -1,0 +1,42 @@
+.holder {
+  height: 191px;
+  width: 297px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.holder:hover {
+  scale: 0.95;
+  box-shadow: inset 0px 0px 30px rgba(50, 29, 97, 0.5);
+}
+
+.holder-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.holder-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2c154d;
+  margin-bottom: 3px;
+}
+
+.holder-subtitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #756b85;
+  flex: 1;
+}
+
+.holder-date {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #756b85;
+}

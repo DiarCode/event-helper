@@ -1,0 +1,60 @@
+.navbar {
+  max-width: 100%;
+  background: #140f1f;
+}
+
+.navbar-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 51px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 26px;
+  margin: 0 auto;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar-nav * {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav *:hover {
+  color: #c050b3;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-profile * {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all 0.3s ease;
+}
+
+.navbar-login:hover {
+  color: #f369e2;
+}
+
+.navbar-signup {
+  padding: 8px 20px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
+
+.navbar-signup:hover {
+  border: 1px solid #f369e2;
+  background: #f369e2;
+}

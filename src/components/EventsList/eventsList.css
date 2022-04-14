@@ -1,0 +1,32 @@
+.events-list {
+  margin-top: 34px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.events-add {
+  width: 297px;
+  height: 191px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding: 66px 105px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #6f24b9;
+  transition: all 0.3s ease;
+}
+
+.events-add-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.events-add:hover {
+  scale: 0.95;
+  box-shadow: inset 0px 0px 30px rgba(50, 29, 97, 0.5);
+}

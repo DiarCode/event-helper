@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LoginBG from "../../assets/loginBG.png";
 import "./loginStyle.css";
 
@@ -21,7 +22,7 @@ const LoginPage = () => {
           </div>
           <div className="login-footer">
             <span className="login-acc">Don’t have an account?</span>
-            <span className="login-signup">Sign up</span>
+            <Link to="/signup" className="login-signup">Sign up</Link>
           </div>
         </div>
       </div>

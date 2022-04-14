@@ -1,6 +1,7 @@
 import React from "react";
 import "./signupStyle.css";
 import SignupBG from "../../assets/signupBG.png";
+import { Link } from "react-router-dom";
 
 const SignupPage = () => {
   return (
@@ -18,7 +19,7 @@ const SignupPage = () => {
           <button className="signup-btn">Sign up</button>
           <div className="signup-footer">
             <span className="signup-acc">Already have an account?</span>
-            <span className="signup-signin">Sign in</span>
+            <Link to="/login" className="signup-signin">Sign in</Link>
           </div>
         </div>
         <div className="signup-photo">
