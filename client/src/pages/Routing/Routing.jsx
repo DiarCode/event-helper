@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AboutPage from "../AboutPage/AboutPage";
 import AdvicePage from "../AdvicePage/AdvicePage";
 import CreateNewEventPage from "../CreateNewEventPage/CreateNewEventPage";
+import EventInformationPage from "../EventInformationPage/EventInformationPage";
 import EventsPage from "../EventsPage/EventsPage";
 import GalleryPage from "../GalleryPage/GalleryPage";
 import LoginPage from "../LoginPage/LoginPage";
@@ -18,6 +19,7 @@ const Routing = () => {
       <Route path="/advice" element={<AdvicePage />} />
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/create-event" element={<CreateNewEventPage />} />
+      <Route path="/event-information" element={<EventInformationPage />} />
     </Routes>
   );
 };
