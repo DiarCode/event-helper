@@ -2,6 +2,12 @@
   width: 315px;
   background: #ffffff;
   border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.advice-card:hover {
+  scale: 0.95;
+  box-shadow: inset 0px 0px 30px rgba(50, 29, 97, 0.5);
 }
 
 .advice-card-image img {

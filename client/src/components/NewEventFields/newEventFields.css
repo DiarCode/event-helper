@@ -1,0 +1,33 @@
+.newEvent-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.newEvent-inputs input {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  padding: 13px 25px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.newEvent-btn {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #9117dc;
+  padding: 12px 35px;
+  border: 2px solid #9117dc;
+  background: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.newEvent-btn:hover {
+  color: #fff;
+  background-color: #9117dc;
+}
