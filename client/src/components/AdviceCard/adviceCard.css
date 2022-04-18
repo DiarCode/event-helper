@@ -1,0 +1,30 @@
+.advice-card {
+  width: 315px;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.advice-card-image img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.advice-card-text {
+  max-width: 85%;
+  padding: 25px 28px;
+}
+
+.advice-card-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2c154d;
+  margin-bottom: 12px;
+}
+
+.advice-card-body {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #756b85;
+}

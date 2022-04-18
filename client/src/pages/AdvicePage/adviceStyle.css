@@ -1,0 +1,28 @@
+.advice {
+  width: 100%;
+  background-color: #140f1f;
+}
+
+.advice-content {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.advice-image {
+  margin-bottom: 90px;
+}
+
+.advice-image img {
+  width: 100%;
+  height: auto;
+}
+
+.advice-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+  color: #fdf0ff;
+  margin-bottom: 65px;
+}
+
