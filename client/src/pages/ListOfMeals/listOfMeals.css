@@ -1,0 +1,83 @@
+.mealsList {
+  width: 100%;
+  min-height: 100%;
+  background-color: #140f1f;
+}
+
+.mealsList-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+.mealsList-title {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.mealsList-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+.mealsList-search button {
+  text-decoration: underline;
+  background: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.mealsList-search input {
+  background: none;
+  padding: 11px;
+  border-bottom: 2px solid #ffffff;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.mealsList-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mealsList-item {
+  border-radius: 20px;
+  width: 300px;
+  padding: 20px 25px;
+  background-color: #fff;
+}
+
+.mealsList-item-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin-bottom: 2px;
+}
+
+.mealsList-item-seat {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.handler {
+  margin-top: 60px;
+  font-weight: 500;
+  color: #4a4850;
+  font-size: 20px;
+}

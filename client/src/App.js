@@ -1,5 +1,6 @@
 import Routing from "./pages/Routing/Routing";
-import './App.css';
+import "./App.css";
+import React from "react";
 
 function App() {
   return (
