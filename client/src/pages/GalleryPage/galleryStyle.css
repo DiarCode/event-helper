@@ -1,0 +1,17 @@
+.gallery {
+  width: 100%;
+  min-height: 100%;
+  background-color: #140f1f;
+}
+
+.gallery-content {
+  width: 100%;
+  padding: 50px 40px;
+  margin-bottom: 100px;
+}
+
+.gallery-slider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+}
