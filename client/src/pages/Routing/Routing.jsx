@@ -6,6 +6,7 @@ import CreateNewEventPage from "../CreateNewEventPage/CreateNewEventPage";
 import EventInformationPage from "../EventInformationPage/EventInformationPage";
 import EventsPage from "../EventsPage/EventsPage";
 import GalleryPage from "../GalleryPage/GalleryPage";
+import ListOfGuestsPage from "../ListOfGuestsPage/ListOfGuestsPage";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
 
@@ -20,6 +21,7 @@ const Routing = () => {
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/create-event" element={<CreateNewEventPage />} />
       <Route path="/event-information" element={<EventInformationPage />} />
+      <Route path="/guest-list" element={<ListOfGuestsPage />} />
     </Routes>
   );
 };
