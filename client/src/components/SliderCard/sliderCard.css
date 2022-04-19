@@ -1,0 +1,34 @@
+.slider {
+  width: 100%;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide-title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.slider-carousel {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.carousel-back img {
+  transform: rotate(180deg);
+}
+
+.carousel-image img {
+  max-width: 100%;
+  width: 1230px;
+  height: 488px;
+  border-radius: 20px;
+}
