@@ -21,7 +21,7 @@ const Routing = () => {
       <Route path="/advice" element={<AdvicePage />} />
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/create-event" element={<CreateNewEventPage />} />
-      <Route path="/event-information" element={<EventInformationPage />} />
+      <Route path="/event-information/:id" element={<EventInformationPage />} />
       <Route path="/guest-list" element={<ListOfGuestsPage />} />
       <Route path="/meals-list" element={<ListOfMealsPage />} />
     </Routes>
