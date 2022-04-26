@@ -2,6 +2,7 @@ import React from "react";
 import "./signupStyle.css";
 import SignupBG from "../../assets/signupBG.png";
 import { Link } from "react-router-dom";
+import SignupFields from "../../components/SignupFields/SignupFields";
 
 const SignupPage = () => {
   return (
@@ -10,16 +11,12 @@ const SignupPage = () => {
         <div className="signup-main">
           <div className="signup-title">Create account</div>
           <div className="signup-subtitle">Fill out information</div>
-          <div className="signup-inputs">
-            <input type="text" placeholder="Full name" />
-            <input type="text" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm password" />
-          </div>
-          <button className="signup-btn">Sign up</button>
+          <SignupFields />
           <div className="signup-footer">
             <span className="signup-acc">Already have an account?</span>
-            <Link to="/login" className="signup-signin">Sign in</Link>
+            <Link to="/login" className="signup-signin">
+              Sign in
+            </Link>
           </div>
         </div>
         <div className="signup-photo">

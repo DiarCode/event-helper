@@ -58,3 +58,11 @@
   border: 1px solid #f369e2;
   background: #f369e2;
 }
+
+.navbar-icon-btn {
+  background: none;
+}
+
+.navbar-icon-btn img {
+  width: 35px;
+}

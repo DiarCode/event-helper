@@ -4,7 +4,7 @@ import Add from "../../assets/eventsAddIcon.png";
 import "./eventsList.css";
 import { Link } from "react-router-dom";
 
-const EventsList = () => {
+const  EventsList = () => {
   return (
     <div className="events-list">
       <Link to="/create-event" className="events-add">

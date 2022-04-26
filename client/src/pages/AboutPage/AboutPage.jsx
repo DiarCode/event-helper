@@ -22,7 +22,7 @@ const AboutPage = () => {
           <div className="about-block1 block">
             <div className="block1-text block-text">
               <div className="block1-title block-title">
-                A successful event starts with excellent preparation{" "}
+                A successful event starts with excellent preparation
               </div>
               <div className="block1-body block-body">
                 Our website will help you gather all the information you need
