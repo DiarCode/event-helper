@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
+import { loginAccountService } from "../Helpers/userHelperMethods";
 
 const LoginFields = () => {
   // eslint-disable-next-line
@@ -14,19 +15,13 @@ const LoginFields = () => {
     const emailValue = emailRef.current.value;
     const passwordValue = passwordRef.current.value;
 
-    const response = await fetch(process.env.REACT_APP_LOGIN_FETCH_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ emailValue, passwordValue }),
-    });
+    const response = await loginAccountService(emailValue, passwordValue);
 
-    const data = await response.json();
-
-    if (data.user) {
+    if (response.user) {
       setCookie(
         process.env.REACT_APP_USER_COOKIES,
         {
-          token: data.user,
+          token: response.user,
           isAuth: true,
         },
         { maxAge: process.env.REACT_APP_USER_COOKIES_MAX_AGE }

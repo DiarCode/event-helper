@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { registerAccountService } from "../Helpers/userHelperMethods";
 
 const SignupFields = () => {
   const nameRef = useRef();
@@ -16,18 +17,16 @@ const SignupFields = () => {
     const confirmPasswordValue = confirmPasswordRef.current.value;
 
     if (passwordValue === confirmPasswordValue) {
-      const response = await fetch(process.env.REACT_APP_REGISTER_FETCH_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nameValue, emailValue, passwordValue }),
-      });
+      const response = await registerAccountService(
+        nameValue,
+        emailValue,
+        passwordValue
+      );
 
-      const data = await response.json();
-
-      if (data.status === "OK") {
+      if (response.success) {
         pageNavigation("../login");
       } else {
-        alert(data.error);
+        alert(response.error);
       }
     }
   }

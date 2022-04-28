@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import EventsList from "../../components/EventsList/EventsList";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
-import './eventsStyle.css'
+import "./eventsStyle.css";
 
 const EventsPage = () => {
   return (

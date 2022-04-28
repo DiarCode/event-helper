@@ -13,9 +13,9 @@ class UserController {
         userEmail: requestBody.emailValue,
         userPassword: hashedPassword,
       });
-      res.json({ status: "OK" });
+      res.json({ success: true });
     } catch (error) {
-      res.json({ status: "ERROR", error: error.message });
+      res.json({ success: false, error: error.message });
     }
   }
 
@@ -41,11 +41,11 @@ class UserController {
           process.env.JWT_SECRET_KEY
         );
 
-        return res.json({ status: "OK", user: token });
+        return res.json({ success: true, user: token });
       }
     }
 
-    res.json({ status: "ERROR", user: false });
+    res.json({ success: false, user: false });
   }
 }
 

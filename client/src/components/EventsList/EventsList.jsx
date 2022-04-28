@@ -17,7 +17,7 @@ const EventsList = () => {
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ userID: userData.userID }),
+          body: JSON.stringify({ userID: userData && userData.userID }),
         }
       ).then(res => res.json());
 

@@ -60,3 +60,14 @@
   text-decoration-line: underline;
   color: #2b1a44;
 }
+
+.eventInfo-delete {
+  margin-top: 60px;
+}
+
+.eventInfo-delete button {
+  background: none;
+  font-size: 17px;
+  color: rgb(105, 106, 117);
+  text-decoration: underline;
+}

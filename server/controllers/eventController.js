@@ -1,5 +1,4 @@
 const Event = require("../models/event.model");
-const jwt = require("jsonwebtoken");
 
 class EventController {
   async getAllEvents(req, res) {
@@ -26,10 +25,30 @@ class EventController {
         uid: uid,
       });
 
-      res.json({ status: "OK", eventID: newEvent._id });
+      res.json({ success: true, eventID: newEvent._id });
     } catch (error) {
       console.log(error);
-      res.json({ status: "ERROR", error: error.message });
+      res.json({ success: false, error: error.message });
+    }
+  }
+
+  async deleteEvent(req, res) {
+    try {
+      const eventID = req.body.eventID;
+      await Event.findByIdAndDelete(eventID);
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
+
+  async getEventData(req, res) {
+    try {
+      const eventID = req.body.eventID;
+      const data = await Event.findById(eventID);
+      res.send(data);
+    } catch (error) {
+      res.json({ error: error.message });
     }
   }
 }

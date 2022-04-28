@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { createNewEventService } from "../Helpers/helperMethods";
 import useUserData from "../Hooks/useUserData";
 import "./newEventFields.css";
 
@@ -16,24 +17,17 @@ const NewEventFields = () => {
     const eventDate = dateRef.current.value;
     const uid = userData.userID;
 
-    const response = await fetch(process.env.REACT_APP_NEW_EVENT_FETCH_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        eventName: eventName,
-        eventDescription: eventDescription,
-        eventDate: eventDate,
-        uid: uid,
-      }),
-    });
+    const response = await createNewEventService(
+      eventName,
+      eventDescription,
+      eventDate,
+      uid
+    );
 
-    const data = await response.json();
-    console.log(data);
-
-    if (data.status === "OK") {
-      pageNavigation(`../event-information/${data.eventID}`);
+    if (response.success) {
+      pageNavigation(`../event-information/${response.eventID}`);
     } else {
-      alert(data.error);
+      alert(response.error);
     }
   }
 
