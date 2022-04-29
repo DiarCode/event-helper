@@ -1,6 +1,7 @@
 const Event = require("../models/event.model");
 
 class EventController {
+  
   async getAllEvents(req, res) {
     const requestBody = req.body;
     const uid = requestBody.userID;

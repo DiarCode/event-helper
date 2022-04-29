@@ -4,6 +4,7 @@ const bcrypt = require("bcryptjs");
 require("dotenv").config();
 
 class UserController {
+  
   async registration(req, res) {
     try {
       const requestBody = req.body;
