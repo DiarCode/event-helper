@@ -6,14 +6,11 @@ const useFetchGuestsList = id => {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(
-        "http://localhost:8000/api/events/get/guests",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ eventID: id }),
-        }
-      ).then(res => res.json());
+      const response = await fetch(process.env.REACT_APP_GET_GUESTS_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ eventID: id }),
+      }).then(res => res.json());
 
       setGuestsList(response);
     }

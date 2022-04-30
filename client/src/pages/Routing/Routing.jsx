@@ -11,6 +11,7 @@ import ListOfGuestsPage from "../ListOfGuestsPage/ListOfGuestsPage";
 import ListOfMealsPage from "../ListOfMeals/ListOfMeals";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
+import ProtectedRoutes from "./ProtectedRoutes/ProtectedRoutes";
 
 const Routing = () => {
   return (
@@ -21,14 +22,18 @@ const Routing = () => {
       <Route path="/events" element={<EventsPage />} />
       <Route path="/advice" element={<AdvicePage />} />
       <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/create-event" element={<CreateNewEventPage />} />
 
-      <Route path="/event-information/:id" element={<EventInformationPage />} />
-      <Route path="/guests-list/:id" element={<ListOfGuestsPage />} />
-      <Route path="/create-note/:id" element={<CreateNewNotePage />} />
-
-      <Route path="/guest-list" element={<ListOfGuestsPage />} />
-      <Route path="/meals-list" element={<ListOfMealsPage />} />
+      <Route element={<ProtectedRoutes />}>
+        <Route
+          path="/event-information/:id"
+          element={<EventInformationPage />}
+        />
+        <Route path="/guests-list/:id" element={<ListOfGuestsPage />} />
+        <Route path="/create-note/:id" element={<CreateNewNotePage />} />
+        <Route path="/guest-list" element={<ListOfGuestsPage />} />
+        <Route path="/meals-list" element={<ListOfMealsPage />} />
+        <Route path="/create-event" element={<CreateNewEventPage />} />
+      </Route>
     </Routes>
   );
 };

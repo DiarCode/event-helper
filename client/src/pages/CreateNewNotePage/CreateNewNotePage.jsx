@@ -14,18 +14,15 @@ const CreateNewNotePage = () => {
   async function createNewNote() {
     const titleValue = titleRef.current.value;
     const bodyValue = bodyRef.current.value;
-    const response = await fetch(
-      "http://localhost:8000/api/events/create/note",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          eventID: id,
-          noteTitle: titleValue,
-          noteBody: bodyValue,
-        }),
-      }
-    ).then(res => res.json());
+    const response = await fetch(process.env.REACT_APP_CREATE_NOTE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        eventID: id,
+        noteTitle: titleValue,
+        noteBody: bodyValue,
+      }),
+    }).then(res => res.json());
 
     console.log(response);
 

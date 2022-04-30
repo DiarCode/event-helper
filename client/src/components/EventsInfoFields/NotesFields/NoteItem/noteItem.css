@@ -1,0 +1,38 @@
+.noteItem {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.noteItem-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2b1a44;
+}
+
+.noteItem-body {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2b1a44;
+}
+
+/* Delete button */
+.noteItem-delete {
+  margin-left: 10px;
+}
+
+.noteItem-delete button {
+  color: #000;
+  background: none;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: all 0.5s ease;
+}
+
+.noteItem-delete button:hover {
+  color: #ce3434;
+}

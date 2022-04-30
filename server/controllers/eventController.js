@@ -41,6 +41,23 @@ class EventController {
       res.json({ success: false, error: error.message });
     }
   }
+  
+  async deleteNote(req, res) {
+    try {
+      const { eventID, noteTitle, noteBody } = req.body;
+      const data = await Event.findById(eventID);
+
+      const filteredEventNotes = data.eventNotes.filter(
+        note => note.noteTitle !== noteTitle
+      );
+      data.eventNotes = filteredEventNotes;
+      data.save();
+
+      res.json({ success: true, data: noteTitle });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
 
   async getEventData(req, res) {
     try {
@@ -74,6 +91,16 @@ class EventController {
       res.json({ success: true });
     } catch (error) {
       res.json({ success: false, error: error.message });
+    }
+  }
+
+  async getNotesList(req, res) {
+    try {
+      const eventID = req.body.eventID;
+      const data = await Event.findById(eventID);
+      res.send(data && data.eventNotes);
+    } catch (error) {
+      res.json({ error: error.message });
     }
   }
 }

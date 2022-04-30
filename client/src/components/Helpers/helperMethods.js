@@ -1,5 +1,5 @@
 const deleteEventService = async id => {
-  const response = await fetch("http://localhost:8000/api/events/delete", {
+  const response = await fetch(process.env.REACT_APP_EVENT_DELETE_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ eventID: id }),
@@ -28,4 +28,14 @@ const createNewEventService = async (
   return response;
 };
 
-export { deleteEventService, createNewEventService };
+const deleteNoteService = async (id, title, body) => {
+  const response = await fetch(process.env.REACT_APP_NOTE_DELETE_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ eventID: id, noteTitle: title, noteBody: body }),
+  }).then(res => res.json());
+
+  return response;
+};
+
+export { deleteEventService, createNewEventService, deleteNoteService };

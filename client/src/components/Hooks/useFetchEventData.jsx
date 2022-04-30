@@ -6,7 +6,7 @@ const useFetchEventData = id => {
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch("http://localhost:8000/api/events/get", {
+      const response = await fetch(process.env.REACT_APP_GET_EVENTS_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ eventID: id }),
