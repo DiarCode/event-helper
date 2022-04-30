@@ -1,10 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import GuestCard from "../../components/GuestCard/GuestCard";
+import useFetchGuestsList from "../../components/Hooks/useFetchGuestsList";
 import Navbar from "../../components/Navbar/Navbar";
 import "./listOfGuestsPage.css";
 
 const ListOfGuestsPage = () => {
+  const { id } = useParams();
+  const guestsList = useFetchGuestsList(id);
+
   return (
     <div className="guestList">
       <Navbar />
@@ -17,9 +22,7 @@ const ListOfGuestsPage = () => {
         </div>
 
         <div className="guestList-list">
-          <GuestCard />
-          <GuestCard />
-          <GuestCard />
+          {guestsList && guestsList.map(guest => <GuestCard />)}
         </div>
       </div>
       <Footer />

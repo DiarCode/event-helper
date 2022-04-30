@@ -40,10 +40,10 @@ const EventInformationPage = () => {
         </div>
 
         <div className="eventInfo-card">
-          <GuestsFields info={eventData && eventData.eventGuests} />
-          <NotesFields info={eventData && eventData.eventNotes} />
-          <DateFields info={eventData && eventData.eventDate} />
-          <MealFields info={eventData && eventData.eventMeals} />
+          <GuestsFields guestsInfo={eventData && eventData.eventGuests} />
+          <NotesFields notesInfo={eventData && eventData.eventNotes} />
+          <DateFields dateInfo={eventData && eventData.eventDate} />
+          <MealFields mealsInfo={eventData && eventData.eventMeals} />
         </div>
 
         <div className="eventInfo-delete">

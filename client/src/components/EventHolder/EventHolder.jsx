@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAdjustDate } from "../Hooks/useAdjustDate";
 import "./eventHolder.css";
 
 const EventHolder = ({ info }) => {
   const eventURL = `/event-information/${info._id}`;
-  const rawDate = Date(info.eventDate).split(" ");
-  const adjustedDate = `${rawDate[1]} - ${rawDate[2]} - ${rawDate[3]}`;
+  const adjustedDate = useAdjustDate(info.eventDate);
   return (
     <Link to={eventURL} className="holder">
       <div className="holder-content">

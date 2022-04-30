@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import AboutPage from "../AboutPage/AboutPage";
 import AdvicePage from "../AdvicePage/AdvicePage";
 import CreateNewEventPage from "../CreateNewEventPage/CreateNewEventPage";
+import CreateNewNotePage from "../CreateNewNotePage/CreateNewNotePage";
 import EventInformationPage from "../EventInformationPage/EventInformationPage";
 import EventsPage from "../EventsPage/EventsPage";
 import GalleryPage from "../GalleryPage/GalleryPage";
@@ -21,7 +22,11 @@ const Routing = () => {
       <Route path="/advice" element={<AdvicePage />} />
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/create-event" element={<CreateNewEventPage />} />
+
       <Route path="/event-information/:id" element={<EventInformationPage />} />
+      <Route path="/guests-list/:id" element={<ListOfGuestsPage />} />
+      <Route path="/create-note/:id" element={<CreateNewNotePage />} />
+
       <Route path="/guest-list" element={<ListOfGuestsPage />} />
       <Route path="/meals-list" element={<ListOfMealsPage />} />
     </Routes>

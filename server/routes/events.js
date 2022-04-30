@@ -6,6 +6,8 @@ router
   .post("/events/list", eventController.getAllEvents)
   .post("/events/create", eventController.createNewEvent)
   .post("/events/delete", eventController.deleteEvent)
-  .post("/events/get", eventController.getEventData);
+  .post("/events/get", eventController.getEventData)
+  .post("/events/get/guests", eventController.getGuestsList)
+  .post("/events/create/note", eventController.createNewNote);
 
 module.exports = router;

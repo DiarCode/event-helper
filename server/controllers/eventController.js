@@ -1,7 +1,6 @@
 const Event = require("../models/event.model");
 
 class EventController {
-  
   async getAllEvents(req, res) {
     const requestBody = req.body;
     const uid = requestBody.userID;
@@ -50,6 +49,31 @@ class EventController {
       res.send(data);
     } catch (error) {
       res.json({ error: error.message });
+    }
+  }
+
+  async getGuestsList(req, res) {
+    try {
+      const eventID = req.body.eventID;
+      const data = await Event.findById(eventID);
+      res.send(data && data.eventGuests);
+    } catch (error) {
+      res.json({ error: error.message });
+    }
+  }
+
+  async createNewNote(req, res) {
+    try {
+      const { eventID, noteTitle, noteBody } = req.body;
+
+      const data = await Event.findById(eventID);
+
+      data.eventNotes.push({ noteTitle: noteTitle, noteBody: noteBody });
+      data.save();
+
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
     }
   }
 }
