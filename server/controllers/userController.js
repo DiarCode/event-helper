@@ -1,20 +1,34 @@
 const User = require("../models/user.model");
+const validator = require("validator");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 
 class UserController {
-  
   async registration(req, res) {
     try {
-      const requestBody = req.body;
-      const hashedPassword = await bcrypt.hash(requestBody.passwordValue, 10);
-      await User.create({
-        userName: requestBody.nameValue,
-        userEmail: requestBody.emailValue,
-        userPassword: hashedPassword,
+      const { nameValue, emailValue, passwordValue } = req.body;
+      const validEmail = validator.isEmail(emailValue);
+      const validPassword = validator.isLength(passwordValue, {
+        min: 5,
+        max: undefined,
       });
-      res.json({ success: true });
+      const validName = validator.isLength(nameValue, {
+        min: 3,
+        max: undefined,
+      });
+
+      if (validEmail && validPassword && validName) {
+        const hashedPassword = await bcrypt.hash(passwordValue, 10);
+        await User.create({
+          userName: nameValue,
+          userEmail: emailValue,
+          userPassword: hashedPassword,
+        });
+        res.json({ success: true });
+      } else {
+        res.json({ success: false, error: "Invalid input value provided" });
+      }
     } catch (error) {
       res.json({ success: false, error: error.message });
     }
