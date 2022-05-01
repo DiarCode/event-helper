@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import { generateKey } from "../../Helpers/generateKeyFunction";
 import { useFetchNotesList } from "../../Hooks/useFetchNotesList";
 import NoteItem from "./NoteItem/NoteItem";
 
@@ -7,10 +8,6 @@ const NotesFields = () => {
   const { id } = useParams();
   const notesList = useFetchNotesList(id);
   const url = `/create-note/${id}`;
-
-  const generateKey = pre => {
-    return `${pre}_${new Date().getTime()}`;
-  };
 
   return (
     <div className="card-notes card">

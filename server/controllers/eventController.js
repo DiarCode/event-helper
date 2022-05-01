@@ -41,10 +41,10 @@ class EventController {
       res.json({ success: false, error: error.message });
     }
   }
-  
+
   async deleteNote(req, res) {
     try {
-      const { eventID, noteTitle, noteBody } = req.body;
+      const { eventID, noteTitle } = req.body;
       const data = await Event.findById(eventID);
 
       const filteredEventNotes = data.eventNotes.filter(
@@ -53,7 +53,24 @@ class EventController {
       data.eventNotes = filteredEventNotes;
       data.save();
 
-      res.json({ success: true, data: noteTitle });
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
+
+  async deleteGuest(req, res) {
+    try {
+      const { eventID, guestName } = req.body;
+      const data = await Event.findById(eventID);
+
+      const filteredEventGuests = data.eventGuests.filter(
+        guest => guest.guestName !== guestName
+      );
+      data.eventGuests = filteredEventGuests;
+      data.save();
+
+      res.json({ success: true });
     } catch (error) {
       res.json({ success: false, error: error.message });
     }
@@ -94,6 +111,21 @@ class EventController {
     }
   }
 
+  async createNewGuest(req, res) {
+    try {
+      const { eventID, guestName, guestSeat } = req.body;
+
+      const data = await Event.findById(eventID);
+
+      data.eventGuests.push({ guestName: guestName, guestSeat: guestSeat });
+      data.save();
+
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
+
   async getNotesList(req, res) {
     try {
       const eventID = req.body.eventID;
@@ -101,6 +133,18 @@ class EventController {
       res.send(data && data.eventNotes);
     } catch (error) {
       res.json({ error: error.message });
+    }
+  }
+
+  async changeEventDate(req, res) {
+    try {
+      const { eventID, newDate } = req.body;
+      const data = await Event.findById(eventID);
+      data.eventDate = newDate;
+      data.save();
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
     }
   }
 }

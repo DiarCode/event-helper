@@ -7,7 +7,7 @@ const NoteItem = ({ title, body }) => {
   const { id } = useParams();
 
   async function deleteNote() {
-    const response = await deleteNoteService(id, title, body);
+    const response = await deleteNoteService(id, title);
 
     if (response.success) {
       window.location.reload(false);

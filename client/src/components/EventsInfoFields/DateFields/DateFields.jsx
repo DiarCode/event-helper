@@ -1,9 +1,11 @@
 import React from "react";
 import { useAdjustDate } from "../../Hooks/useAdjustDate";
 import EventInfoItem from "../EventInfoItem/EventInfoItem";
-import moment from 'moment'
+import { Link, useParams } from "react-router-dom";
 
 const DateFields = ({ dateInfo }) => {
+  const { id } = useParams();
+  const changeDateURL = `/change-date/${id}`;
   const adjustedDate = useAdjustDate(dateInfo);
 
   return (
@@ -12,7 +14,9 @@ const DateFields = ({ dateInfo }) => {
       <div className="card-list">
         <EventInfoItem title={"Event date:"} body={adjustedDate} />
       </div>
-      <div className="card-link">Change event date</div>
+      <Link to={changeDateURL} className="card-link">
+        Change event date
+      </Link>
     </div>
   );
 };

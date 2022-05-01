@@ -9,10 +9,8 @@ const ProfileModal = ({ isActive, setIsActive }) => {
   const userFetchedData = useUserData();
 
   function logoutAccount() {
-    if (cookies.userAuthData) {
-      removeCookie("userAuthData");
-      window.location.reload(false);
-    }
+    removeCookie("userAuthData");
+    window.location.reload(false);
   }
 
   function handleUserName() {
