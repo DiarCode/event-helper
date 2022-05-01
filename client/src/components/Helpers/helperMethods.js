@@ -38,4 +38,23 @@ const deleteNoteService = async (id, title, body) => {
   return response;
 };
 
-export { deleteEventService, createNewEventService, deleteNoteService };
+const createNewNoteService = async (id, titleValue, bodyValue) => {
+  const response = await fetch(process.env.REACT_APP_CREATE_NOTE_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      eventID: id,
+      noteTitle: titleValue,
+      noteBody: bodyValue,
+    }),
+  }).then(res => res.json());
+
+  return response;
+};
+
+export {
+  deleteEventService,
+  createNewEventService,
+  deleteNoteService,
+  createNewNoteService,
+};

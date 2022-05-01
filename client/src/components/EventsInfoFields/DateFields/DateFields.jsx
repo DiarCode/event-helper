@@ -1,6 +1,7 @@
 import React from "react";
 import { useAdjustDate } from "../../Hooks/useAdjustDate";
 import EventInfoItem from "../EventInfoItem/EventInfoItem";
+import moment from 'moment'
 
 const DateFields = ({ dateInfo }) => {
   const adjustedDate = useAdjustDate(dateInfo);

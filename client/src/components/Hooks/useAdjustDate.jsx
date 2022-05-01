@@ -1,8 +1,9 @@
-import React from "react";
+import moment from "moment";
 
 const useAdjustDate = rawDate => {
-  const date = Date(rawDate).split(" ");
-  const adjustedDate = `${date[1]} ${date[2]} ${date[3]}`;
+  const adjustedDate = moment(rawDate)
+    .utc()
+    .format("DD/MM/YYYY");
 
   return adjustedDate;
 };
