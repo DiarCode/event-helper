@@ -47,6 +47,13 @@
   gap: 20px;
 }
 
+.guestList-list-handler {
+  margin-top: 40px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #543d86ab;
+}
+
 .guestList-add {
   font-weight: 600;
   font-size: 15px;
