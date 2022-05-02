@@ -1,4 +1,4 @@
-.noteItem {
+.mealItem {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -6,14 +6,14 @@
   position: relative;
 }
 
-.noteItem-title {
+.mealItem-title {
   font-weight: 600;
   font-size: 17px;
   line-height: 22px;
   color: #2b1a44;
 }
 
-.noteItem-body {
+.mealItem-body {
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
@@ -21,11 +21,11 @@
 }
 
 /* Delete button */
-.noteItem-delete {
+.mealItem-delete {
   margin-left: 10px;
 }
 
-.noteItem-delete button {
+.mealItem-delete button {
   color: #000;
   background: none;
   font-weight: 500;
@@ -33,6 +33,6 @@
   transition: all 0.5s ease;
 }
 
-.noteItem-delete button:hover {
+.mealItem-delete button:hover {
   color: #ce3434;
 }

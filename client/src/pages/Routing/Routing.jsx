@@ -5,6 +5,7 @@ import AdvicePage from "../AdvicePage/AdvicePage";
 import ChangeDatePage from "../ChangeDatePage/ChangeDatePage";
 import CreateNewEventPage from "../CreateNewEventPage/CreateNewEventPage";
 import CreateNewGuestPage from "../CreateNewGuestPage/CreateNewGuestPage";
+import CreateNewMealPage from "../CreateNewMealPage/CreateNewMealPage";
 import CreateNewNotePage from "../CreateNewNotePage/CreateNewNotePage";
 import EventInformationPage from "../EventInformationPage/EventInformationPage";
 import EventsPage from "../EventsPage/EventsPage";
@@ -36,6 +37,7 @@ const Routing = () => {
         <Route path="/meals-list" element={<ListOfMealsPage />} />
         <Route path="/create-event" element={<CreateNewEventPage />} />
         <Route path="/create-guest/:id" element={<CreateNewGuestPage />} />
+        <Route path="/create-meal/:id" element={<CreateNewMealPage />} />
         <Route path="/change-date/:id" element={<ChangeDatePage />} />
       </Route>
     </Routes>

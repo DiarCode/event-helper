@@ -59,6 +59,23 @@ class EventController {
     }
   }
 
+  async deleteMeal(req, res) {
+    try {
+      const { eventID, mealServe } = req.body;
+      const data = await Event.findById(eventID);
+
+      const filteredEventMeals = data.eventMeals.filter(
+        meal => meal.mealServe !== mealServe
+      );
+      data.eventMeals = filteredEventMeals;
+      data.save();
+
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
+
   async deleteGuest(req, res) {
     try {
       const { eventID, guestName } = req.body;
@@ -111,6 +128,21 @@ class EventController {
     }
   }
 
+  async createNewMeal(req, res) {
+    try {
+      const { eventID, mealServe, mealName } = req.body;
+
+      const data = await Event.findById(eventID);
+
+      data.eventMeals.push({ mealServe: mealServe, mealName: mealName });
+      data.save();
+
+      res.json({ success: true });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
+
   async createNewGuest(req, res) {
     try {
       const { eventID, guestName, guestSeat } = req.body;
@@ -131,6 +163,16 @@ class EventController {
       const eventID = req.body.eventID;
       const data = await Event.findById(eventID);
       res.send(data && data.eventNotes);
+    } catch (error) {
+      res.json({ error: error.message });
+    }
+  }
+
+  async getMealsList(req, res) {
+    try {
+      const eventID = req.body.eventID;
+      const data = await Event.findById(eventID);
+      res.send(data && data.eventMeals);
     } catch (error) {
       res.json({ error: error.message });
     }

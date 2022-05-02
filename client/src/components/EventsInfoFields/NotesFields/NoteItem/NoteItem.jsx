@@ -18,8 +18,7 @@ const NoteItem = ({ title, body }) => {
 
   return (
     <div className="noteItem">
-      <div className="noteItem-title">{title}</div>
-      <div className="noteItem-gap">:</div>
+      <div className="noteItem-title">{title}:</div>
       <div className="noteItem-body">{body}</div>
 
       <div className="noteItem-delete">

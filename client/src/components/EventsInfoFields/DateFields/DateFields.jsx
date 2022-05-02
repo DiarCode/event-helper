@@ -12,7 +12,7 @@ const DateFields = ({ dateInfo }) => {
     <div className="card-date card">
       <div className="card-title">Date</div>
       <div className="card-list">
-        <EventInfoItem title={"Event date:"} body={adjustedDate} />
+        <EventInfoItem title={"Event date"} body={adjustedDate} />
       </div>
       <Link to={changeDateURL} className="card-link">
         Change event date

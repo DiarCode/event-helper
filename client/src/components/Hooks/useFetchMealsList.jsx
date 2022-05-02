@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
 
-
-const useFetchNotesList = id => {
-  const [notesList, setNotesList] = useState();
+const useFetchMealsList = id => {
+  const [mealsList, setMealsList] = useState();
 
   useEffect(() => {
     async function getData() {
-      const response = await fetch(process.env.REACT_APP_GET_NOTES_URL, {
+      const response = await fetch(process.env.REACT_APP_GET_MEALS_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ eventID: id }),
       }).then(res => res.json());
 
-      setNotesList(response);
+      setMealsList(response);
     }
 
     getData();
   }, []);
 
-  return notesList;
+  return mealsList;
 };
 
-export { useFetchNotesList };
+export { useFetchMealsList };

@@ -1,0 +1,80 @@
+.newMeal {
+  width: 100%;
+  min-height: 100%;
+  background-color: #140f1f;
+  display: flex;
+  flex-direction: column;
+}
+
+.newMeal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.newMeal-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 55px;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
+.newMeal-ingridients {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.newMeal-ingridients a {
+  color: #9453d6;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.newMeal-ingridients a:hover {
+  color: #8a4dc6;
+}
+
+.newMeal-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.newMeal-fields input {
+  width: 300px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 13px 17px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.newMeal-btn {
+  margin-bottom: 50px;
+}
+
+.newMeal-btn button {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #8a4dc6;
+  padding: 13px 30px;
+  border: 2px solid #8a4dc6;
+  background: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.newMeal-btn button:hover {
+  color: #fff;
+  background: #8a4dc6;
+}

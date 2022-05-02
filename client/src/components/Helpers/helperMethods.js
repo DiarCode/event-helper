@@ -38,6 +38,16 @@ const deleteNoteService = async (id, title) => {
   return response;
 };
 
+const deleteMealService = async (id, serve) => {
+  const response = await fetch(process.env.REACT_APP_MEAL_DELETE_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ eventID: id, mealServe: serve }),
+  }).then(res => res.json());
+
+  return response;
+};
+
 const deleteGuestService = async (id, name) => {
   const response = await fetch(process.env.REACT_APP_GUEST_DELETE_URL, {
     method: "POST",
@@ -89,6 +99,20 @@ const changeDateService = async (id, newDate) => {
   return response;
 };
 
+const createNewMealService = async (id, serveValue, nameValue) => {
+  const response = await fetch(process.env.REACT_APP_CREATE_MEAL_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      eventID: id,
+      mealServe: serveValue,
+      mealName: nameValue,
+    }),
+  }).then(res => res.json());
+
+  return response;
+};
+
 export {
   deleteEventService,
   createNewEventService,
@@ -97,4 +121,6 @@ export {
   createNewGuestService,
   deleteGuestService,
   changeDateService,
+  createNewMealService,
+  deleteMealService,
 };
