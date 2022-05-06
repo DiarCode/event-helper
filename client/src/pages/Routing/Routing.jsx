@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AboutPage from "../AboutPage/AboutPage";
+import AdminPage from "../AdminPage/AdminPage";
 import AdvicePage from "../AdvicePage/AdvicePage";
 import ChangeDatePage from "../ChangeDatePage/ChangeDatePage";
 import CreateNewEventPage from "../CreateNewEventPage/CreateNewEventPage";
@@ -25,6 +26,7 @@ const Routing = () => {
       <Route path="/events" element={<EventsPage />} />
       <Route path="/advice" element={<AdvicePage />} />
       <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/admin" element={<AdminPage />} />
 
       <Route element={<ProtectedRoutes />}>
         <Route

@@ -16,7 +16,7 @@ const ListOfGuestsPage = () => {
   const createNewGuestURL = `/create-guest/${id}`;
 
   useEffect(() => {
-    if (searchValue == "") {
+    if (searchValue === "") {
       setFilteredList(() => guestsList);
     }
   }, [guestsList, filteredList]);
@@ -26,7 +26,7 @@ const ListOfGuestsPage = () => {
 
     setFilteredList(
       filteredList.filter(guest => {
-        if (searchValue == "") return guest;
+        if (searchValue === "") return guest;
         return (
           guest.guestName.toLowerCase().includes(searchValue.toLowerCase()) ||
           guest.guestSeat.includes(searchValue)
