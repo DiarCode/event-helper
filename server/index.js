@@ -6,11 +6,6 @@ const app = express();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 8000;
 
-//TEST
-app.get("/", (req, res) => {
-  res.send("Hello")
-})
-
 app.use(cors());
 app.use(express.json());
 routingPages.map(route => app.use("/api", route));
