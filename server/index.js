@@ -4,6 +4,12 @@ const cors = require("cors");
 const routingPages = require("./routes/rootRouting");
 const app = express();
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 8000;
+
+//TEST
+app.get("/", (req, res) => {
+  res.send("Hello")
+})
 
 app.use(cors());
 app.use(express.json());
@@ -22,7 +28,7 @@ async function runServer() {
       )
       .then(() => {
         app.listen(process.env.PORT, () =>
-          console.log(`Server is running on port ${process.env.PORT}`)
+          console.log(`Server is running on port ${PORT}`)
         );
       });
   } catch (error) {
