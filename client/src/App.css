@@ -29,6 +29,12 @@ aside {
 
 html,
 body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+html,
+body {
   height: 100%;
   width: 100%;
   font-size: 100%;
@@ -80,7 +86,8 @@ h6 {
 /*--------------------*/
 
 .App {
-  width: 100vw;
+  margin-top: 74px;
+  width: 100%;
   height: 100vh;
   font-family: "Montserrat", sans-serif;
 }

@@ -4,22 +4,21 @@
   background-color: #140f1f;
 }
 
-.about-photo{
-    margin-bottom: 130px;
+.about-photo {
+  margin-bottom: 130px;
 }
 
-.about-blocks{
-    display: flex;
-    flex-direction: column;
-    gap: 130px;
-    margin-bottom: 154px;
+.about-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  margin-bottom: 154px;
 }
 
 .block {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .block-text {
@@ -93,4 +92,61 @@
 .block3-signup:hover {
   background-color: #f8cef3;
   color: #f37de5;
+}
+
+@media (max-width: 730px) {
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .block-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .block-img {
+    order: 1;
+  }
+
+  .block3-signup {
+    margin-top: 20px;
+    align-self: center;
+  }
+
+  .about-photo {
+    margin-bottom: 100px;
+  }
+  .about-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 110px;
+  }
+}
+
+@media (max-width: 500px) {
+  .block-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .block-body {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .block-text {
+    max-width: 100%;
+  }
 }

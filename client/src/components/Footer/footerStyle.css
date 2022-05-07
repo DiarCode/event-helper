@@ -1,17 +1,23 @@
 .footer {
   width: 100%;
   background-color: #2c154d;
+  padding: 80px 200px;
 }
 
-.footer-logo{
-    margin-right: 30px;
+.footer-logo a {
+  font-family: "Jost";
+  font-weight: 700;
+  font-size: 40px;
+  color: #ffffff;
 }
 
 .footer-content {
-  padding: 83px 154px;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
 .footer-info {
@@ -38,9 +44,40 @@
   font-size: 16px;
   line-height: 22px;
   color: #dbdbdb;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .footer-list *:hover {
   color: #f37de5;
+}
+
+@media (max-width: 1220px) {
+  .footer {
+    padding: 80px 80px;
+  }
+}
+
+@media (max-width: 930px) {
+  .footer-logo a{
+    font-size: 30px;
+  }
+  .footer-info{
+    gap: 70px;
+  }
+}
+
+@media (max-width: 750px) {
+  .footer {
+    padding: 80px 40px;
+  }
+  .footer-list *{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 545px) {
+  .footer-info{
+    flex-direction: column;
+    gap: 30px;
+  }
 }

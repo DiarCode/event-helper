@@ -5,13 +5,16 @@
 }
 
 .login-content {
+  width: 100%;
+  height: 100%;
   display: flex;
+  padding: auto;
   color: #fff;
 }
 
 .login-photo img {
-  min-width: 100%;
-  height: 100vh;
+  max-width: 1500px;
+  height: auto;
 }
 
 .login-main {
@@ -92,3 +95,26 @@
   text-decoration-line: underline;
   color: #9117dc;
 }
+
+@media (max-width: 1210px) {
+  .login-photo {
+    display: none;
+  }
+
+  .login {
+    display: flex;
+    padding-top: 30px;
+  }
+
+  .login-btn{
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 420px) {
+  .login-inputs input {
+    width: 300px;
+  }
+}
+
+

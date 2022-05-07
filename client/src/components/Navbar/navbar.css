@@ -1,42 +1,66 @@
 .navbar {
-  max-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1200;
+  width: 100%;
+  padding: 20px 30px;
   background: #140f1f;
 }
 
 .navbar-content {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 30px 51px;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 26px;
+  max-width: 1300px;
   margin: 0 auto;
-  align-items: center;
-  color: #fff;
-}
-
-.navbar-nav * {
-  color: #fff;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  transition: all 0.3s ease;
-}
-
-.navbar-nav *:hover {
-  color: #c050b3;
-}
-
-.navbar-profile {
   display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgb(0, 0, 0);
 }
 
-.navbar-profile * {
+.navbar-burger-open img {
+  width: 30px;
+}
+
+.navbar-burger-open {
+  display: none;
+}
+
+.navbar-burger {
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+  top: 82px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px 0;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(35, 11, 71, 0.15);
+}
+
+.navbar-burger * {
+  text-align: center;
+  font-size: 20px;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.navbar-navigation {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-navigation * {
   color: #fff;
   font-weight: 500;
   font-size: 18px;
@@ -44,19 +68,43 @@
   transition: all 0.3s ease;
 }
 
-.navbar-login:hover {
-  color: #f369e2;
+.navbar-navigation *:hover {
+  color: #b95bef;
+}
+
+.navbar-account {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-account * {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all 0.3s ease;
 }
 
 .navbar-signup {
-  padding: 8px 20px;
-  border: 1px solid #ffffff;
   border-radius: 10px;
+  border: 1px solid #b95bef;
+  color: #b95bef;
+  padding: 5px 15px;
+  transition: all 0.3s ease-in;
 }
 
 .navbar-signup:hover {
-  border: 1px solid #f369e2;
-  background: #f369e2;
+  background: #b95bef;
+  color: #fff;
+}
+
+.navbar-login:hover {
+  color: #b95bef;
+}
+
+.navbar-profile-icon {
+  background: none;
 }
 
 .navbar-icon-btn {
@@ -65,4 +113,32 @@
 
 .navbar-icon-btn img {
   width: 35px;
+}
+
+@media (max-width: 750px) {
+  .navbar-burger-open {
+    display: block;
+  }
+
+  .navbar-navigation {
+    display: none;
+  }
+
+  .navbar-content {
+    justify-content: unset;
+  }
+
+  .navbar-logo {
+    flex: 1;
+  }
+
+  .navbar-account {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-login {
+    display: none;
+  }
 }
