@@ -6,9 +6,19 @@ const app = express();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 8000;
 
+//Middlewares
 app.use(cors());
 app.use(express.json());
+
+//Page routing
 routingPages.map(route => app.use("/api", route));
+
+//Initial page
+app.get("/", (req, res) => {
+  res.send(
+    "Hello, this is server for Event-Helper web application on https://event-helper-online.herokuapp.com"
+  );
+});
 
 //Server running
 async function runServer() {
