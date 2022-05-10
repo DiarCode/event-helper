@@ -18,6 +18,7 @@
 }
 
 .advice-title {
+  padding: 0 20px;
   text-align: center;
   font-weight: 700;
   font-size: 35px;
@@ -25,4 +26,3 @@
   color: #fdf0ff;
   margin-bottom: 65px;
 }
-

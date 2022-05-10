@@ -6,6 +6,7 @@ import HomeImage from "../../assets/adviceBG.png";
 import AdviceList from "../../components/AdviceList/AdviceList";
 
 const AdvicePage = () => {
+
   return (
     <div className="advice">
       <Navbar />

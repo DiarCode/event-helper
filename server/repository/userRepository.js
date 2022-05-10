@@ -6,6 +6,7 @@ class UserRepository {
       userName: nameValue,
       userEmail: emailValue,
       userPassword: hashedPassword,
+      isAdmin: false,
     });
   }
 

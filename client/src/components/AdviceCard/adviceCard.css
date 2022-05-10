@@ -1,21 +1,23 @@
 .advice-card {
-  width: 315px;
+  flex: 1 auto;
+  max-width: 315px;
+  height: 440px;
   background: #ffffff;
   border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.advice-card:hover {
-  scale: 0.95;
-  box-shadow: inset 0px 0px 30px rgba(50, 29, 97, 0.5);
+  cursor: pointer;
 }
 
 .advice-card-image img {
   border-radius: 20px;
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .advice-card-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   max-width: 85%;
   padding: 25px 28px;
 }

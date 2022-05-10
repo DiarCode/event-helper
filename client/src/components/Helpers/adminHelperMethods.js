@@ -10,7 +10,6 @@ async function uploadAndGetURL(file) {
     .then(() => {
       return getDownloadURL(storageRef)
         .then(url => {
-          alert("Successfully uploaded!");
           return url;
         })
         .catch(error => console.log(error));
@@ -20,4 +19,23 @@ async function uploadAndGetURL(file) {
   return imageURL;
 }
 
-export { uploadAndGetURL };
+async function uploadAdviceService(imageUrl, title, body, link) {
+  const response = await fetch(
+    "https://event-helper-server.herokuapp.com/api/admin/add/advice",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        adviceImageURL: imageUrl,
+        adviceTitle: title,
+        adviceBody: body,
+        adviceLink: link
+      }),
+    }
+  ).then(res => res.json());
+
+  if (response.success) return alert("Successfully added to DB");
+  else return alert("Error: " + response.error);
+}
+
+export { uploadAndGetURL, uploadAdviceService };

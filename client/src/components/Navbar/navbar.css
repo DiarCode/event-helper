@@ -41,6 +41,7 @@
 }
 
 .navbar-burger * {
+  color: #140f1f;
   text-align: center;
   font-size: 20px;
 }

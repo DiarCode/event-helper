@@ -45,7 +45,8 @@ class UserController {
           const token = UserService.createUserToken(
             userData.userEmail,
             userData.userName,
-            userData._id
+            userData._id,
+            userData.isAdmin
           );
 
           return res.json({ success: true, user: token });

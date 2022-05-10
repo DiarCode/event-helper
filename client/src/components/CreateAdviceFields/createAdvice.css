@@ -1,0 +1,54 @@
+.adminAdvice-fields {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 20px rgba(11, 71, 13, 0.15);
+}
+
+.adminAdvice-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.adminAdvice-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.adminAdvice-inputs input {
+  width: 100%;
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  background: #ffffff;
+  border: 1px solid #0e2513;
+  border-radius: 15px;
+}
+
+.adminAdvice-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.adminAdvice-btn button {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #722194;
+  background: #d37ef8;
+  border-radius: 20px;
+  padding: 13px 44px;
+}
+
+@media (max-width: 450px) {
+  .adminAdvice-btn button {
+    font-size: 16px;
+    padding: 8px 35px;
+    border-radius: 15px;
+  }
+}

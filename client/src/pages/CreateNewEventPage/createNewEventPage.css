@@ -5,19 +5,24 @@
 
 .newEvent-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
   margin-bottom: 100px;
 }
 
+.newEvent-image {
+  width: 80%;
+}
+
 .newEvent-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .newEvent-fields {
-  padding: 0 80px;
+  width: 50%;
+  padding: 0 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,4 +34,14 @@
   line-height: 37px;
   color: #ffffff;
   margin-bottom: 60px;
+}
+
+@media (max-width: 770px) {
+  .newEvent-image {
+    display: none;
+  }
+
+  .newEvent-fields {
+    width: 100%;
+  }
 }

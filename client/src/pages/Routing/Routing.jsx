@@ -15,6 +15,7 @@ import ListOfGuestsPage from "../ListOfGuestsPage/ListOfGuestsPage";
 import ListOfMealsPage from "../ListOfMeals/ListOfMeals";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
+import ProtectedAdminRoutes from "./ProtectedRoutes/ProtectedAdminRoutes";
 import ProtectedRoutes from "./ProtectedRoutes/ProtectedRoutes";
 
 const Routing = () => {
@@ -26,7 +27,6 @@ const Routing = () => {
       <Route path="/events" element={<EventsPage />} />
       <Route path="/advice" element={<AdvicePage />} />
       <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/admin" element={<AdminPage />} />
 
       <Route element={<ProtectedRoutes />}>
         <Route
@@ -41,6 +41,10 @@ const Routing = () => {
         <Route path="/create-guest/:id" element={<CreateNewGuestPage />} />
         <Route path="/create-meal/:id" element={<CreateNewMealPage />} />
         <Route path="/change-date/:id" element={<ChangeDatePage />} />
+      </Route>
+
+      <Route element={<ProtectedAdminRoutes />}>
+        <Route path="/admin" element={<AdminPage />} />
       </Route>
     </Routes>
   );

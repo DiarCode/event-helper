@@ -4,6 +4,7 @@ const galleryPage = require("./gallery");
 const eventsPage = require("./events");
 const registerPage = require("./register");
 const loginPage = require("./login");
+const adminPage = require("./admin");
 
 module.exports = [
   aboutPage,
@@ -12,4 +13,5 @@ module.exports = [
   eventsPage,
   registerPage,
   loginPage,
+  adminPage,
 ];

@@ -14,9 +14,8 @@ const useFetchEventsList = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ userID: userData && userData.userID }),
         }
-      ).then(res => res.text());
+      ).then(res => res.json());
 
-      console.log(response);
       setEventsList(response);
     }
 

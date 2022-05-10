@@ -23,6 +23,7 @@
 }
 
 .newMeal-ingridients {
+  padding: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
