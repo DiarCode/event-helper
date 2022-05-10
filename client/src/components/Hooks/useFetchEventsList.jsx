@@ -14,15 +14,16 @@ const useFetchEventsList = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ userID: userData && userData.userID }),
         }
-      ).then(res => res.json());
+      ).then(res => res.text());
 
+      console.log(response);
       setEventsList(response);
     }
 
     getData();
   }, []);
 
-  return eventsList;
+  return eventsList || [];
 };
 
 export default useFetchEventsList;

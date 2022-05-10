@@ -5,7 +5,7 @@ class EventController {
     const requestBody = req.body;
     const uid = requestBody.userID;
     try {
-      const listOfEvents = await EventRepository.getEventsByUID(uid);
+      const listOfEvents = await EventRepository.findAllEventsByUID(uid);
       res.json(listOfEvents);
     } catch (error) {
       res.send(error.message);

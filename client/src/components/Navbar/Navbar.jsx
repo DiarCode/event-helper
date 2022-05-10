@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./navbar.css";
 import BurgerMenuOpen from "../../assets/burgerMenu.svg";
 import BurgerMenuClose from "../../assets/burgerMenuClose.svg";
-import Logo from "../../assets/navbarLogo.png";
 import { Link } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import UserIcon from "../../assets/userIcon.png";
