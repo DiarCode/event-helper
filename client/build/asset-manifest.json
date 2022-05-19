@@ -1,9 +1,9 @@
 {
-  "main.css": "/static/css/main.1942b22a.chunk.css",
-  "main.js": "/static/js/main.bfa40928.chunk.js",
-  "main.js.map": "/static/js/main.bfa40928.chunk.js.map",
-  "static/js/1.0357e7b1.chunk.js": "/static/js/1.0357e7b1.chunk.js",
-  "static/js/1.0357e7b1.chunk.js.map": "/static/js/1.0357e7b1.chunk.js.map",
+  "main.css": "/static/css/main.0cc41cae.chunk.css",
+  "main.js": "/static/js/main.25f5bf48.chunk.js",
+  "main.js.map": "/static/js/main.25f5bf48.chunk.js.map",
+  "static/js/1.fc55bee5.chunk.js": "/static/js/1.fc55bee5.chunk.js",
+  "static/js/1.fc55bee5.chunk.js.map": "/static/js/1.fc55bee5.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/burgerMenu.svg": "/static/media/burgerMenu.23c55a7f.svg",
@@ -16,10 +16,11 @@
   "static/media/newEventImage.png": "/static/media/newEventImage.f682834d.png",
   "static/media/sliderImage.png": "/static/media/sliderImage.52957cfd.png",
   "static/media/loginBG.png": "/static/media/loginBG.7f731291.png",
+  "static/media/googleLogo.png": "/static/media/googleLogo.1e01fe36.png",
   "static/media/signupBG.png": "/static/media/signupBG.d51cb585.png",
   "static/media/eventsStyle.css": "/static/media/eventsBG.3d571d54.png",
-  "static/css/main.1942b22a.chunk.css.map": "/static/css/main.1942b22a.chunk.css.map",
+  "static/css/main.0cc41cae.chunk.css.map": "/static/css/main.0cc41cae.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.d3203cd994b1bf0699b164a2dd0076eb.js": "/precache-manifest.d3203cd994b1bf0699b164a2dd0076eb.js",
+  "precache-manifest.cb938925e733aca1b395155d8ce590c6.js": "/precache-manifest.cb938925e733aca1b395155d8ce590c6.js",
   "service-worker.js": "/service-worker.js"
 }
