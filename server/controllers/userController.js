@@ -2,6 +2,7 @@ const UserRepository = require("../repository/userRepository");
 const UserValidator = require("../validator/userValidator");
 const UserService = require("../service/userService");
 const bcrypt = require("bcryptjs");
+const UserModel = require("../models/user.model");
 require("dotenv").config();
 
 class UserController {
@@ -54,6 +55,39 @@ class UserController {
       }
 
       res.json({ success: false, user: false });
+    } catch (error) {
+      res.json({ success: false, error: error.message });
+    }
+  }
+
+  async googleLogin(req, res) {
+    try {
+      const newUserData = req.body.data;
+
+      const candidate = await UserModel.findOne({
+        userEmail: newUserData.userEmail,
+      });
+
+      if (candidate) {
+        const tokenForCandidate = UserService.createUserToken(
+          candidate.userEmail,
+          candidate.userName,
+          candidate._id,
+          candidate.isAdmin
+        );
+
+        return res.json({ success: true, user: tokenForCandidate });
+      }
+
+      const newUser = await UserModel.create(newUserData);
+
+      const tokenForNewUser = UserService.createUserToken(
+        newUser.userEmail,
+        newUser.userName,
+        newUser._id,
+        newUser.isAdmin
+      );
+      res.json({ success: true, user: tokenForNewUser });
     } catch (error) {
       res.json({ success: false, error: error.message });
     }

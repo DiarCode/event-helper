@@ -3,9 +3,8 @@ const router = express.Router();
 const userController = require("../controllers/userController");
 
 router
-  .route("/login")
-  .get((req, res) => res.send("Login"))
-  .post(userController.login);
-
+  .get("/login",(req, res) => res.send("Login"))
+  .post("/login", userController.login)
+  .post("/login/google", userController.googleLogin)
 
 module.exports = router;

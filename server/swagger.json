@@ -1,0 +1,201 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Event-Helper",
+    "description": "Event managment and handler web app"
+  },
+  "host": "https://event-helper-server.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Events",
+      "description": "API for events in the system"
+    },
+    {
+      "name": "User",
+      "description": "API for user in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/events/list": {
+      "post": {
+        "tags": ["Events"],
+        "summary": "Get events list",
+        "description": "",
+        "operationId": "getEvent",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "uid",
+            "name": "uid",
+            "description": "User must be authenticated",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Event"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/events/delete/note": {
+      "delete": {
+        "tags": ["Events"],
+        "summary": "Deletes chosen meal",
+        "description": "",
+        "operationId": "deleteMeal",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "Object id",
+            "name": "Object id",
+            "description": "Each meal must have an id",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Event"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/events/change/date": {
+      "put": {
+        "tags": ["Events"],
+        "summary": "Update a date",
+        "description": "",
+        "operationId": "changeDate",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "Object id",
+            "name": "Object id",
+            "description": "Each date must have an id",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Event"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/login": {
+      "put": {
+        "tags": ["User"],
+        "summary": "Login into account",
+        "description": "",
+        "operationId": "login",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "User params",
+            "name": "User params",
+            "description": "User must provide email and password",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/register": {
+      "put": {
+        "tags": ["User"],
+        "summary": "Register an account",
+        "description": "",
+        "operationId": "registration",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "User params",
+            "name": "User params",
+            "description": "User must provide email, password and name",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "eventName": {
+          "type": "string"
+        },
+        "eventDescription": {
+          "type": "string"
+        },
+        "eventDate": {
+          "type": "date"
+        },
+        "eventGuests": {
+          "type": "array"
+        },
+        "eventNotes": {
+          "type": "array"
+        },
+        "eventMeals": {
+          "type": "array"
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "userEmail": {
+          "type": "string"
+        },
+        "userPassword": {
+          "type": "string"
+        },
+        "isAdmin": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

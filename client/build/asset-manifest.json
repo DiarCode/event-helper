@@ -1,20 +1,25 @@
 {
-  "files": {
-    "main.css": "/static/css/main.d69dee09.css",
-    "main.js": "/static/js/main.aa73c0da.js",
-    "static/media/aboutHome.png": "/static/media/aboutHome.b6b259d6066246c80907.png",
-    "static/media/aboutImage3.png": "/static/media/aboutImage3.3b4f5ae9ccdb15e839b1.png",
-    "static/media/signupBG.png": "/static/media/signupBG.f858c8befa08ad1e9bc5.png",
-    "static/media/aboutImage2.png": "/static/media/aboutImage2.aa4cb4b0fe2a4315bbcb.png",
-    "static/media/aboutImage1.png": "/static/media/aboutImage1.1feed5cd125bd5abd20a.png",
-    "static/media/loginBG.png": "/static/media/loginBG.6c08a32a0a5a729a2129.png",
-    "static/media/eventsBG.png": "/static/media/eventsBG.597f6f10923be1f5a495.png",
-    "index.html": "/index.html",
-    "main.d69dee09.css.map": "/static/css/main.d69dee09.css.map",
-    "main.aa73c0da.js.map": "/static/js/main.aa73c0da.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.d69dee09.css",
-    "static/js/main.aa73c0da.js"
-  ]
+  "main.css": "/static/css/main.1942b22a.chunk.css",
+  "main.js": "/static/js/main.bfa40928.chunk.js",
+  "main.js.map": "/static/js/main.bfa40928.chunk.js.map",
+  "static/js/1.0357e7b1.chunk.js": "/static/js/1.0357e7b1.chunk.js",
+  "static/js/1.0357e7b1.chunk.js.map": "/static/js/1.0357e7b1.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/burgerMenu.svg": "/static/media/burgerMenu.23c55a7f.svg",
+  "static/media/burgerMenuClose.svg": "/static/media/burgerMenuClose.29edbf84.svg",
+  "static/media/aboutHome.png": "/static/media/aboutHome.311d9650.png",
+  "static/media/aboutImage1.png": "/static/media/aboutImage1.89cedf00.png",
+  "static/media/aboutImage2.png": "/static/media/aboutImage2.3424d107.png",
+  "static/media/aboutImage3.png": "/static/media/aboutImage3.1e715039.png",
+  "static/media/adviceBG.png": "/static/media/adviceBG.3f7e0747.png",
+  "static/media/newEventImage.png": "/static/media/newEventImage.f682834d.png",
+  "static/media/sliderImage.png": "/static/media/sliderImage.52957cfd.png",
+  "static/media/loginBG.png": "/static/media/loginBG.7f731291.png",
+  "static/media/signupBG.png": "/static/media/signupBG.d51cb585.png",
+  "static/media/eventsStyle.css": "/static/media/eventsBG.3d571d54.png",
+  "static/css/main.1942b22a.chunk.css.map": "/static/css/main.1942b22a.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.d3203cd994b1bf0699b164a2dd0076eb.js": "/precache-manifest.d3203cd994b1bf0699b164a2dd0076eb.js",
+  "service-worker.js": "/service-worker.js"
 }

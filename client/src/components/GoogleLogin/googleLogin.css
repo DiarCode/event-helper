@@ -1,0 +1,28 @@
+.googleLogin {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 10px;
+  color: #fff;
+  background: rgb(44, 102, 195);
+  padding: 13px 25px;
+  border-radius: 20px;
+
+  transition: all 0.3s ease;
+}
+
+.googleLogin img {
+  width: 20px;
+  height: 20px;
+}
+
+.googleLogin p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.googleLogin:hover {
+  background: rgb(36, 85, 164);
+}
